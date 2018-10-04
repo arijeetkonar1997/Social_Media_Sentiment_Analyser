@@ -2,7 +2,7 @@ import pandas as pd
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.downloader.download('vader_lexicon')
-file=input(' Enter fb_sentiment_analysis xlsx file name: ')
+file=input(' Enter social_media_sentiment_analysis xlsx file name: ')
 xl=pd.ExcelFile(file)#Read from Excel
 dfs=xl.parse(xl.sheet_names[0])#Parsing Excel Sheet to Data Frame
 dfs=list(dfs['Timeline'])#Removes the blank rows from the Data Frame
